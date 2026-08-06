@@ -1,0 +1,72 @@
+import org.spongepowered.gradle.plugin.config.PluginLoaders
+import org.spongepowered.plugin.metadata.model.PluginDependency
+
+plugins {
+  id("minimotd.shadow-platform")
+  alias(libs.plugins.sponge.gradle.plugin)
+}
+
+dependencies {
+  implementation(projects.minimotdCommon)
+}
+
+sponge {
+  injectRepositories(false)
+  apiVersion("8.1.0-SNAPSHOT")
+  plugin(rootProject.name.lowercase()) {
+    loader {
+      name(PluginLoaders.JAVA_PLAIN)
+      version("1.0")
+    }
+    license("MIT")
+    displayName(rootProject.name)
+    entrypoint("xyz.jpenilla.minimotd.sponge8.MiniMOTDPlugin")
+    description(project.description)
+    links {
+      homepage(Constants.GITHUB_URL)
+      source(Constants.GITHUB_URL)
+      issues("${Constants.GITHUB_URL}/issues")
+    }
+    contributor("jmp") {
+      description("Lead Developer")
+    }
+    dependency("spongeapi") {
+      loadOrder(PluginDependency.LoadOrder.AFTER)
+      optional(false)
+    }
+    dependency("miniplaceholders") {
+      loadOrder(PluginDependency.LoadOrder.AFTER)
+      optional(true)
+      version = "3.0.0"
+    }
+  }
+}
+
+tasks {
+  shadowJar {
+    configureForNativeAdventurePlatform()
+    dependencies {
+      exclude(dependency("io.leangen.geantyref:geantyref"))
+    }
+  }
+}
+
+publishMods.modrinth {
+  modLoaders.add("sponge")
+  minecraftVersions.addAll(
+    "1.16.5",
+    "1.18.2",
+    "1.19.4",
+    "1.20.6",
+    "1.21.1",
+    "1.21.3",
+    "1.21.4",
+    "1.21.5",
+    "1.21.8",
+    "1.21.10",
+    "1.21.11",
+    "26.1.2",
+    "26.2",
+  )
+  optional("miniplaceholders")
+}

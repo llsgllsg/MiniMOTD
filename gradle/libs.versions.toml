@@ -1,0 +1,91 @@
+[versions]
+run-task = "3.0.2"
+resource-factory = "1.3.1"
+mod-publish-plugin = "2.1.1"
+hangarPublishPlugin = "0.1.4"
+indra = "4.0.0"
+shadow = "9.6.1"
+adventure = "4.26.1"
+adventurePlatform = "4.4.1"
+adventurePlatformMod = "7.1.1"
+configurate = "4.2.0"
+slf4j = "1.7.36"
+gson = "2.8.0"
+bstats = "3.2.1"
+paperApiLegacy = "1.16.5-R0.1-SNAPSHOT"
+paperApi = "1.21.11-R0.1-SNAPSHOT"
+paperlib = "1.0.8"
+waterfallApi = "1.16-R0.5-SNAPSHOT"
+fabricApi = "0.153.0+26.2"
+fabricLoader = "0.19.3"
+minecraft = "26.2"
+spongeApi7 = "7.4.0"
+velocityApi = "3.4.0"
+neoforge = "26.2.0.7-beta"
+
+[plugins]
+blossom = { id = "net.kyori.blossom", version = "2.2.0" }
+sponge-gradle-plugin = { id = "org.spongepowered.gradle.plugin", version = "2.3.0" }
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-task" }
+run-velocity = { id = "xyz.jpenilla.run-velocity" }
+run-waterfall = { id = "xyz.jpenilla.run-waterfall" }
+resource-factory-bukkit = { id = "xyz.jpenilla.resource-factory-bukkit-convention", version.ref = "resource-factory" }
+resource-factory-paper = { id = "xyz.jpenilla.resource-factory-paper-convention", version.ref = "resource-factory" }
+resource-factory-velocity = { id = "xyz.jpenilla.resource-factory-velocity-convention", version.ref = "resource-factory" }
+
+[libraries]
+adventureBom = { group = "net.kyori", name = "adventure-bom", version.ref = "adventure" }
+adventureApi = { group = "net.kyori", name = "adventure-api" }
+adventureTextSerializerPlain = { group = "net.kyori", name = "adventure-text-serializer-plain" }
+adventureTextSerializerGson = { group = "net.kyori", name = "adventure-text-serializer-gson" }
+adventurePlatformBungeecord = { group = "net.kyori", name = "adventure-platform-bungeecord", version.ref = "adventurePlatform" }
+adventurePlatformBukkit = { group = "net.kyori", name = "adventure-platform-bukkit", version.ref = "adventurePlatform" }
+adventurePlatformFabric = { group = "net.kyori", name = "adventure-platform-fabric", version.ref = "adventurePlatformMod" }
+adventurePlatformNeoforge = { group = "net.kyori", name = "adventure-platform-neoforge", version.ref = "adventurePlatformMod" }
+adventurePlatformSpongeApi = { group = "net.kyori", name = "adventure-platform-spongeapi", version.ref = "adventurePlatform" }
+minimessage = { group = "net.kyori", name = "adventure-text-minimessage" }
+miniplaceholders = "io.github.miniplaceholders:miniplaceholders-api:3.2.0"
+
+brigadier = "com.mojang:brigadier:1.3.10"
+
+configurateHocon = { group = "org.spongepowered", name = "configurate-hocon", version.ref = "configurate" }
+
+jspecify = "org.jspecify:jspecify:1.0.0"
+
+slf4jApi = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+slf4jJdk14 = { group = "org.slf4j", name = "slf4j-jdk14", version.ref = "slf4j" }
+
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+bstatsBukkit = { group = "org.bstats", name = "bstats-bukkit", version.ref = "bstats" }
+bstatsBungeecord = { group = "org.bstats", name = "bstats-bungeecord", version.ref = "bstats" }
+bstatsVelocity = { group = "org.bstats", name = "bstats-velocity", version.ref = "bstats" }
+bstatsSponge = { group = "org.bstats", name = "bstats-sponge", version.ref = "bstats" }
+
+paperApiLegacy = { group = "com.destroystokyo.paper", name = "paper-api", version.ref = "paperApiLegacy" }
+paperApi = { group = "io.papermc.paper", name = "paper-api", version.ref = "paperApi" }
+paperlib = { group = "io.papermc", name = "paperlib", version.ref = "paperlib" }
+
+waterfallApi = { group = "io.github.waterfallmc", name = "waterfall-api", version.ref = "waterfallApi" }
+
+fabricApi = { group = "net.fabricmc.fabric-api", name = "fabric-api", version.ref = "fabricApi" }
+fabricLoader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabricLoader" }
+minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
+
+# for renovate
+zNeoforge = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
+
+spongeApi7 = { group = "org.spongepowered", name = "spongeapi", version.ref = "spongeApi7" }
+
+velocityApi = { group = "com.velocitypowered", name = "velocity-api", version.ref = "velocityApi" }
+
+junitJupiter = "org.junit.jupiter:junit-jupiter:6.1.2"
+
+# build-logic
+indraCommon = { group = "net.kyori", name = "indra-common", version.ref = "indra" }
+indraLicenser = { group = "net.kyori", name = "indra-licenser-spotless", version.ref = "indra" }
+shadow = { group = "com.gradleup.shadow", name = "shadow-gradle-plugin", version.ref = "shadow" }
+mod-publish-plugin = { module = "me.modmuss50:mod-publish-plugin", version.ref = "mod-publish-plugin" }
+hangarPublishPlugin = { group = "io.papermc", name = "hangar-publish-plugin", version.ref = "hangarPublishPlugin" }
+
+[bundles]
